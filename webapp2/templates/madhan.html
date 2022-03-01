@@ -1,0 +1,200 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title>MY SECOND WEB-PAGE USING D-JANGO</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        body
+        {
+            padding: 12px;
+            margin: 5px;
+           
+        }
+
+        /* MAIN HEADING CSS CODE */
+        #div1
+        {
+            color:white;
+            background-color: chocolate;
+            border:2px solid white ;
+            border-radius: 22px;
+            margin: 5px;
+            padding: 9px;
+        }
+
+    /* ADDING SIDE BY SIDE IMAGES WITH TEXT */
+    div.sidebysideimage
+    {
+	  position:relative;
+	  margin:5px;
+      padding:5px;
+      border-radius: 72px ;
+	  background-color: lightskyblue;
+	  width: 1400px;
+	  height:500px;
+	 
+    }
+   .sidebysideimage1
+   {
+    position:relative;
+	  width: calc(350px - 5px);
+	  height:calc(350px - 5px);
+	  background:white;
+      border-radius: 22px;
+	  margin:50px;
+	  padding:5px;
+	  float:left;
+   }
+   /* HOVER EFFECT TO A LINK */
+   #link1
+   {
+       color:blue;
+       background-color:white;
+       height: 100px;
+       width: 100px;
+   }
+   #link1:hover
+   {
+       color: white;
+       background-color: blue;
+   }
+    </style>
+    
+    <body  style="background-image:url('{% static 'webapp/bgimage2.jpg'%}'); background-repeat:no-repeat;background-attachment:fixed;background-size:cover;">
+        <!-- MAIN HEADING -->
+        <div id="div1" class="text-center">
+            <h1 >My First Web Page Using D-jango</h1>
+        </div>
+        
+        <h2 style="color: crimson;">SHORT DESCRIPTION ABOUT <br>
+            <span style="color: blue;">FULL-STACK WEB DEVELOPMENT LANGUAGES</span></h2>
+        <br>
+
+        <!-- ADDING IMAGE WITH TEXT SIDE-BY-SIDE -->
+        <div class="sidebysideimage">
+       
+            <div class="sidebysideimage1"> <h2> <kbd>ABOUT HTML</kbd></h2>   
+                <p style="color: darkred;">The HyperText Markup Language, or HTML is the<br>
+                 standard markup language for documents designed <br>
+                 to be displayed in a web browser. 
+                 HTML provides a means to create structured documents by<br>
+                denoting structural semantics for text such as headings,<br>
+                 paragraphs, lists, links, quotes and other items.</p>
+     <img src="{% static "webapp/htmlimage.png" %}" alt="HTML IMAGE"  style="border:2px solid white" height="110px" width="130px"/>
+            </div>
+            
+            <div class="sidebysideimage1"> <h2> <kbd>ABOUT CSS</kbd></h2>
+             <p style="color: darkred;"> CSS (Cascading Style Sheets) is used to style and layout
+                 web pages — for example, to alter the font, color, size,
+                 and spacing of your content, split it into multiple columns,
+                  or add animations and other decorative features.
+                  three types of CSS<br>
+                  Inline CSS.<br>
+                  Internal or Embedded CSS.<br>
+                  External CSS. </p>
+    <img src="{% static "webapp/cssimage.png" %}" alt="HTML IMAGE"  style="border:2px solid white" height="100px" width="130px"/>
+            </div>
+            
+            <div class="sidebysideimage1"> <h2> <kbd>ABOUT JS</kbd></h2>
+                <p style="color: darkred;">JavaScript is commonly used for creating web pages.<br>
+                 It allows us to add dynamic behavior to the webpage<br>
+                and add special effects to the webpage. On websites, it is 
+                 mainly used for validation purposes. JavaScript helps us to
+                  execute complex actions and also enables the interaction of<br>
+                   websites with visitors. </p>
+    <img src="{% static "webapp/jsimage.png" %}" alt="HTML IMAGE"  style="border:2px solid white" height="110px" width="180px"/>
+            </div>
+            </div>  
+
+            <br><br>
+
+        <!-- FLOATING AN IMAGE HORIZONTALLY WITHOUT USING (FLOAT:)-->
+        <!-- BY PLACING ALL IMAGES ONE BY ONE WITHOUT WRITING ANY DATA B/W ANY TWO IMAGES -->
+
+       <h2 style="color:coral"> <b>FLOATING AN IMAGE HORIZONTALLY WITHOUT USING FLOAT</b> </h2>
+      <b> <p style="color: blue;">FIRST TWO IMAGES HAVE ROUNDED CORNERS, WE USED(class="img-rounded") & (class="img-circle)</p> </b>
+   <center>
+     <img  src="{% static "webapp/django1.png" %}" alt="HTML IMAGE"   class="img-rounded" height="150px" width="200px"/>
+     <img src="{% static "webapp/django2.jpg" %}" alt="HTML IMAGE"  class="img-circle"  height="150px" width="200px"/>
+     <img src="{% static "webapp/mrbean.gif" %}" alt="HTML IMAGE"  style="border:9px solid maroon" height="150px" width="200px"/>
+     <img src="{% static "webapp/bulb1.jpg" %}" alt="HTML IMAGE"  style="border:9px solid skyblue" height="150px" width="200px"/>
+     <img src="{% static "webapp/bgimage1.jpg" %}" alt="HTML IMAGE"  style="border:9px solid yellowgreen" height="150px" width="200px"/>
+   </center>
+   <br>
+   <br>
+
+    <!-- I-FRAME -->
+    <h2 style="color: crimson;"> I-FRAME </h2>
+   <iframe src="https://www.youtube.com/" content-security-policy:frame-ancestors 'self' width="300px" height="300px">
+     sorry it cant be opened</iframe>
+   <br><br>
+
+   <!-- LINKING ANOTHER HTML PAGE -->
+   <h2> LINKING ANOTHER HTML PAGE </h2>
+   <a href="madhan2.html" title="open second website">CLICK TO OPEN SECOND HTML PAGE</a>
+
+
+   <!-- Adding  VIDEO -->
+   <h2 style="color: orangered;"><b>ADDING VIDEO IN D-JANGO</b></h2>
+     <video controls width="1400px" height="500px">
+     <source src="{% static "webapp/senoritavideo.mp4" %}" type="video/mp4">
+     </video>
+    <br>
+    <h2 style="color: green;"><b>SENORITA VIDEO</b></h2>
+    <p style="color: blueviolet;">Click <b>Download</b> to TO save the video,<b>FOR FULL-SCREEN</b> click <b>MAXIMIZE SYMOBL</b> , & USE <b>ESC</b> To <b>MINIMIZE</b></p>
+    <br><br>
+     
+    <h4 style="color:navy;">BELOW VIDEOS ARE <b style="color: orangered;"> ENGLISH VIDEO SONGS FOR WHATSAPP STATUS</b></h4>
+    <video controls width="480px" height="500px">
+    <source src="{% static "webapp/idontcare.mp4" %}" type="video/mp4">
+    </video>
+
+    <video controls width="480px" height="500px">
+    <source src="{% static "webapp/Best-Friendship-Status-In-English.mp4" %}" type="video/mp4">
+    </video>
+
+    <video controls width="480px" height="500px">
+    <source src="{% static "webapp/senoritavideo.mp4" %}" type="video/mp4">
+    </video>
+    
+    <br><br>
+
+    <!-- Adding  AUDIO -->
+    <h2 style="color: orangered;"><b>ADDING AUDIO IN DJANGO</b></h2>
+     <audio controls width="900px" height="500px">
+     <source src="{% static "webapp/unstoppable.mp3" %}" type="audio/mp3">
+     </audio>
+     <h2 style="color: green;"> <b>I'M UNSTOPPABLE TODAY SONG</b></h2>
+     <p style="color: blueviolet;"><b>DOWNLOAD</b> by clicking the <b>DOWNLOAD BUTTON</b></p>
+     <br><br>
+
+
+    <h4 style="color: navy;">BELOW SONGS ARE <b style="color: orangered;">ENGLISH SONGS</b></h4>
+    <audio controls width="500px" height="500px">
+    <source src="{% static "webapp/doyouknowsong.mp3" %}" type="audio/mp3">
+    </audio>
+
+    <audio controls width="500px" height="500px">
+    <source src="{% static "webapp/rapsong.mp3" %}" type="audio/mp3">
+    </audio>
+
+    <audio controls width="500px" height="500px">
+    <source src="{% static "webapp/englishsong.mp3" %}" type="audio/mp3">
+    </audio>
+    
+    <br></br>
+    <!-- GIVING LINK -->
+    <h2 style="color: blue;"> <b>CLICK THE LINK TO SEE MR.BEAN'S VIDEO</b> </h2>
+        <a id="link1" href="https://www.youtube.com/watch?v=vxcqkMtacmo" target="blank" title="open video"> <b>CLICK HERE TO SEE THE VIDEO</b> </a> 
+    
+    <br><br>
+
+    </body>
+</html>
